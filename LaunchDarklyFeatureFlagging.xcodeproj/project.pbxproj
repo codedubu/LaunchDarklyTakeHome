@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139E80174936F9EB51B9A54E /* Pods_LaunchDarklyFeatureFlagging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749D4A96E8FFB982DB7AF2E5 /* Pods_LaunchDarklyFeatureFlagging.framework */; };
 		799505CD2711151300751CD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505CC2711151300751CD9 /* AppDelegate.swift */; };
 		799505CF2711151300751CD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505CE2711151300751CD9 /* SceneDelegate.swift */; };
 		799505D12711151300751CD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505D02711151300751CD9 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		749D4A96E8FFB982DB7AF2E5 /* Pods_LaunchDarklyFeatureFlagging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaunchDarklyFeatureFlagging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799505C92711151300751CD9 /* LaunchDarklyFeatureFlagging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchDarklyFeatureFlagging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799505CC2711151300751CD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		799505CE2711151300751CD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		799505D52711151600751CD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		799505D82711151600751CD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799505DA2711151600751CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D15F7D4AC2C568C61E85EE60 /* Pods-LaunchDarklyFeatureFlagging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchDarklyFeatureFlagging.debug.xcconfig"; path = "Target Support Files/Pods-LaunchDarklyFeatureFlagging/Pods-LaunchDarklyFeatureFlagging.debug.xcconfig"; sourceTree = "<group>"; };
+		EDA9DE45C8A73E229C49B71F /* Pods-LaunchDarklyFeatureFlagging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchDarklyFeatureFlagging.release.xcconfig"; path = "Target Support Files/Pods-LaunchDarklyFeatureFlagging/Pods-LaunchDarklyFeatureFlagging.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139E80174936F9EB51B9A54E /* Pods_LaunchDarklyFeatureFlagging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172FF2F974C3A4094AAF92A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D15F7D4AC2C568C61E85EE60 /* Pods-LaunchDarklyFeatureFlagging.debug.xcconfig */,
+				EDA9DE45C8A73E229C49B71F /* Pods-LaunchDarklyFeatureFlagging.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5F77857355C3DD720D372FBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				749D4A96E8FFB982DB7AF2E5 /* Pods_LaunchDarklyFeatureFlagging.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		799505C02711151300751CD9 = {
 			isa = PBXGroup;
 			children = (
 				799505CB2711151300751CD9 /* LaunchDarklyFeatureFlagging */,
 				799505CA2711151300751CD9 /* Products */,
+				172FF2F974C3A4094AAF92A9 /* Pods */,
+				5F77857355C3DD720D372FBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 799505DD2711151600751CD9 /* Build configuration list for PBXNativeTarget "LaunchDarklyFeatureFlagging" */;
 			buildPhases = (
+				A040B1252AFFFB54F5269C9B /* [CP] Check Pods Manifest.lock */,
 				799505C52711151300751CD9 /* Sources */,
 				799505C62711151300751CD9 /* Frameworks */,
 				799505C72711151300751CD9 /* Resources */,
+				AEBE1DBE0FBFB940130469A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A040B1252AFFFB54F5269C9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaunchDarklyFeatureFlagging-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEBE1DBE0FBFB940130469A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaunchDarklyFeatureFlagging/Pods-LaunchDarklyFeatureFlagging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaunchDarklyFeatureFlagging/Pods-LaunchDarklyFeatureFlagging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaunchDarklyFeatureFlagging/Pods-LaunchDarklyFeatureFlagging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		799505C52711151300751CD9 /* Sources */ = {
@@ -291,6 +360,7 @@
 		};
 		799505DE2711151600751CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15F7D4AC2C568C61E85EE60 /* Pods-LaunchDarklyFeatureFlagging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		799505DF2711151600751CD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA9DE45C8A73E229C49B71F /* Pods-LaunchDarklyFeatureFlagging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
