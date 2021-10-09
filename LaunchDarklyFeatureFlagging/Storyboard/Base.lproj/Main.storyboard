@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main TestVC-->
+        <!--Initial Flag Feature Test-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainTestVC" customModule="LaunchDarklyFeatureFlagging" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,6 +42,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8cb-uJ-rKt" secondAttribute="bottom" constant="208" id="plL-BN-faa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Initial Flag Feature Test" largeTitleDisplayMode="always" id="wfJ-kW-zhL"/>
                     <connections>
                         <outlet property="currentFlagStatusLabel" destination="8cb-uJ-rKt" id="nAB-fG-7YK"/>
                         <outlet property="featureFlagTestLabel" destination="3uN-RU-iMx" id="yTx-BR-WHd"/>
@@ -49,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+            <point key="canvasLocation" x="68" y="120"/>
         </scene>
     </scenes>
 </document>

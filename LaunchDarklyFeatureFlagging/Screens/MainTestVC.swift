@@ -30,16 +30,9 @@ class MainTestVC: UIViewController {
     
     // MARK: - Helpers
     fileprivate func checkFeatureValue() {
-        var featureFlagValue = LDClient.get()!.variation(forKey: featureFlagKey, defaultValue: false)
-        
-        if featureFlagValue == false {
-            updateTestLabel(value: featureFlagValue)
-            updateCurrentFlagStatusLabel(value: featureFlagValue)
-        } else {
-            updateTestLabel(value: featureFlagValue)
-            updateCurrentFlagStatusLabel(value: featureFlagValue)
-        }
-        
+        let featureFlagValue = LDClient.get()!.variation(forKey: featureFlagKey, defaultValue: false)
+                
+        featureFlagValue == false ? updateFlagLabels() : updateFlagLabels()
     }
     
     
@@ -58,6 +51,14 @@ class MainTestVC: UIViewController {
         } else {
             currentFlagStatusLabel.text = "Current Flag Status: \n ✅ True ✅"
         }
+    }
+    
+    
+    fileprivate func updateFlagLabels() {
+        let featureFlagValue = LDClient.get()!.variation(forKey: featureFlagKey, defaultValue: false)
+        
+        updateTestLabel(value: featureFlagValue)
+        updateCurrentFlagStatusLabel(value: featureFlagValue)
     }
  
     
