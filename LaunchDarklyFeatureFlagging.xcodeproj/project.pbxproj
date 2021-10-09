@@ -56,15 +56,23 @@
 		799505CB2711151300751CD9 /* LaunchDarklyFeatureFlagging */ = {
 			isa = PBXGroup;
 			children = (
-				799505CC2711151300751CD9 /* AppDelegate.swift */,
-				799505CE2711151300751CD9 /* SceneDelegate.swift */,
+				799505E02711152400751CD9 /* Resources */,
 				799505D02711151300751CD9 /* ViewController.swift */,
 				799505D22711151300751CD9 /* Main.storyboard */,
+			);
+			path = LaunchDarklyFeatureFlagging;
+			sourceTree = "<group>";
+		};
+		799505E02711152400751CD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				799505D52711151600751CD9 /* Assets.xcassets */,
 				799505D72711151600751CD9 /* LaunchScreen.storyboard */,
 				799505DA2711151600751CD9 /* Info.plist */,
+				799505CC2711151300751CD9 /* AppDelegate.swift */,
+				799505CE2711151300751CD9 /* SceneDelegate.swift */,
 			);
-			path = LaunchDarklyFeatureFlagging;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VVA7JF63G;
-				INFOPLIST_FILE = LaunchDarklyFeatureFlagging/Info.plist;
+				INFOPLIST_FILE = LaunchDarklyFeatureFlagging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VVA7JF63G;
-				INFOPLIST_FILE = LaunchDarklyFeatureFlagging/Info.plist;
+				INFOPLIST_FILE = LaunchDarklyFeatureFlagging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
