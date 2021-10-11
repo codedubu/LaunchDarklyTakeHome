@@ -11,6 +11,7 @@ import LaunchDarkly
 extension UserInfoVC {
     
     fileprivate struct featureFlag {
+        
         static var itemViewFlipFeatureFlagKey: String = "user-info-vc-item-view-flipped"
     }
     var itemViewFlipFeatureFlagKey: String {
@@ -44,12 +45,7 @@ extension UserInfoVC {
         let featureFlagValue = LDClient.get()!.variation(forKey: itemViewFlipFeatureFlagKey, defaultValue: false)
         guard let retrievedUser = retrievedUser else { return }
         
-        if featureFlagValue == false {
-            configureUIElementsWithFeatureFlag(with: retrievedUser)
-            
-        } else {
-            configureUIElements(with: retrievedUser)
-        }
+        featureFlagValue == false ? configureUIElements(with: retrievedUser) : configureUIElementsWithFeatureFlag(with: retrievedUser)
     }
     
     
@@ -61,7 +57,7 @@ extension UserInfoVC {
     
     
     func configureItemVCFlipLDFeatureFlag() {
-            self.observeItemVCFlipFeatureFlagKey()
-            self.checkItemVCFlipFeatureValue()
+        self.observeItemVCFlipFeatureFlagKey()
+        self.checkItemVCFlipFeatureValue()
     }
 } // END OF EXTENSION

@@ -11,6 +11,7 @@ import LaunchDarkly
 extension NetworkManager {
     
     fileprivate struct featureFlag {
+        
         static var paginationFeatureFlagKey: String = "change-followers-per-page"
     }
     var paginationFeatureFlagKey: String {
