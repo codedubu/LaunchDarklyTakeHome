@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		139E80174936F9EB51B9A54E /* Pods_LaunchDarklyFeatureFlagging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749D4A96E8FFB982DB7AF2E5 /* Pods_LaunchDarklyFeatureFlagging.framework */; };
+		793DA0672714CA9400645BB5 /* LDPagination+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DA0662714CA9400645BB5 /* LDPagination+Ext.swift */; };
 		799505CD2711151300751CD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505CC2711151300751CD9 /* AppDelegate.swift */; };
 		799505CF2711151300751CD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505CE2711151300751CD9 /* SceneDelegate.swift */; };
 		799505D62711151600751CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799505D52711151600751CD9 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		749D4A96E8FFB982DB7AF2E5 /* Pods_LaunchDarklyFeatureFlagging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaunchDarklyFeatureFlagging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		793DA0662714CA9400645BB5 /* LDPagination+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LDPagination+Ext.swift"; sourceTree = "<group>"; };
 		799505C92711151300751CD9 /* LaunchDarklyFeatureFlagging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchDarklyFeatureFlagging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799505CC2711151300751CD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		799505CE2711151300751CD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		799505CB2711151300751CD9 /* LaunchDarklyFeatureFlagging */ = {
 			isa = PBXGroup;
 			children = (
+				79CA96F52714D708008D339A /* LaunchDarkly Feature Flags */,
 				7997FF3B271415DE009A3E63 /* Managers */,
 				7997FF3A271415D9009A3E63 /* Models */,
 				799505E127114D6300751CD9 /* Screens */,
@@ -328,6 +331,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		79CA96F52714D708008D339A /* LaunchDarkly Feature Flags */ = {
+			isa = PBXGroup;
+			children = (
+				793DA0662714CA9400645BB5 /* LDPagination+Ext.swift */,
+			);
+			path = "LaunchDarkly Feature Flags";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -453,6 +464,7 @@
 				7997FF4D271416B1009A3E63 /* SearchVC.swift in Sources */,
 				7997FF85271418AA009A3E63 /* Constants.swift in Sources */,
 				7997FF3D27141635009A3E63 /* NetworkManager.swift in Sources */,
+				793DA0672714CA9400645BB5 /* LDPagination+Ext.swift in Sources */,
 				7997FF4227141654009A3E63 /* Follower.swift in Sources */,
 				7997FF3F27141640009A3E63 /* PersistenceManager.swift in Sources */,
 				7997FF6D27141814009A3E63 /* GFButton.swift in Sources */,

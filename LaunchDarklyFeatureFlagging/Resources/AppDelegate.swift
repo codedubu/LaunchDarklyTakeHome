@@ -12,7 +12,7 @@ import LaunchDarkly
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private let mobileTestKey = "mob-648573d3-b60d-40b6-8fda-5ca43201aef7"
-    private let mobileProdKey =  "mob-c4291fc6-2174-490b-8d3a-e7bc92ad54dd"
+    private let mobileProdKey = "mob-c4291fc6-2174-490b-8d3a-e7bc92ad54dd"
     
     
     private func setUpLDCClient() {

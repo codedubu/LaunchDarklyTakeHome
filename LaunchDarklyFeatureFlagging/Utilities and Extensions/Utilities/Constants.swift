@@ -53,3 +53,9 @@ enum DeviceTypes {
     }
 } // END OF ENUM
 
+
+enum FFKey {
+ 
+    
+} // END OF ENUM
+

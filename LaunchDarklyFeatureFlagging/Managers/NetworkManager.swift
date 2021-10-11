@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import LaunchDarkly
 
 class NetworkManager {
     
     static let shared               = NetworkManager()
     private let baseURL             = "https://api.github.com/users/"
-    static let followersPerPage     = 100
+    static var followersPerPage     = 0
     let cache                       = NSCache<NSString, UIImage>()
+
     
     private init() {}
     

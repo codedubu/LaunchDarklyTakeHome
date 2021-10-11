@@ -41,7 +41,6 @@ class FollowerListVC: GFDataLoadingVC {
         configureVC()
         getFollowers(username: username, page: page)
         configureDataSource()
-        configureSearchController()
     }
     
     
@@ -78,6 +77,7 @@ class FollowerListVC: GFDataLoadingVC {
         navigationItem.searchController                         = searchController
     }
     
+
     
     func getFollowers(username: String, page: Int) {
         showLoadingView()
@@ -88,6 +88,7 @@ class FollowerListVC: GFDataLoadingVC {
             switch result {
             case .success(let followers):
                 self.updateUI(with: followers)
+                self.configureLDFFOnMainThread()
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Followers Not Found", message: error.rawValue, buttonTitle: "Ok")
