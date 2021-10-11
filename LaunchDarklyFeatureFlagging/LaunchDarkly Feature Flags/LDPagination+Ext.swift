@@ -10,42 +10,20 @@ import LaunchDarkly
 
 extension NetworkManager {
     
-    struct featureFlag {
-        static var paginationFFKey: String = "change-followers-per-page"
+    fileprivate struct featureFlag {
+        static var paginationFeatureFlagKey: String = "change-followers-per-page"
     }
-    var paginationFFKey: String {
+    var paginationFeatureFlagKey: String {
         get {
-            return featureFlag.paginationFFKey
+            return featureFlag.paginationFeatureFlagKey
         }
         set(featureFlagKey) {
-            featureFlag.paginationFFKey = featureFlagKey
+            featureFlag.paginationFeatureFlagKey = featureFlagKey
         }
     }
     
     
-    fileprivate func observeFFKey() {
-        LDClient.get()?.observe(key: paginationFFKey, owner: self) { [weak self] changedFlag in
-            self?.featureFlagDidUpdate(changedFlag.key)
-        }
-    }
-    
-
-    fileprivate func checkFeatureValue() {
-        let featureFlagValue = LDClient.get()!.variation(forKey: paginationFFKey, defaultValue: "oneHundred")
-        
-        updatePaginationValue(targeted: featureFlagValue)
-    }
-    
-
-    fileprivate func featureFlagDidUpdate(_ key: LDFlagKey) {
-        if key == paginationFFKey {
-            checkFeatureValue()
-        }
-    }
-    
-    
-    // MARK: - Helper Methods
-    
+    // MARK: - Feature Flag Helper Methods
     func updatePaginationValue(targeted variation: String) {
         switch variation {
         case "oneHundred":
@@ -58,17 +36,37 @@ extension NetworkManager {
             NetworkManager.followersPerPage = 100
         }
     }
+    
+    
+    // MARK: - LaunchDarkly Helper Methods
+    fileprivate func observePaginationFeatureFlagKey() {
+        LDClient.get()?.observe(key: paginationFeatureFlagKey, owner: self) { [weak self] changedFlag in
+            self?.featureFlagDidUpdate(changedFlag.key)
+        }
+    }
+    
+
+    fileprivate func checkPaginationFeatureValue() {
+        let featureFlagValue = LDClient.get()!.variation(forKey: paginationFeatureFlagKey, defaultValue: "oneHundred")
+        
+        updatePaginationValue(targeted: featureFlagValue)
+    }
+    
+
+    fileprivate func featureFlagDidUpdate(_ key: LDFlagKey) {
+        if key == paginationFeatureFlagKey {
+            checkPaginationFeatureValue()
+        }
+    }
 } // END OF EXTENSION
 
 
 extension FollowerListVC {
     
-    func configureLDFFOnMainThread() {
+    func configureLDFeatureFlagOnMainThread() {
         DispatchQueue.main.async {
-            NetworkManager.shared.observeFFKey()
-            NetworkManager.shared.checkFeatureValue()
-            
-            self.presentGFAlertOnMainThread(title: "Feature Flag Notice", message: "Followers has been changed to \(NetworkManager.followersPerPage)", buttonTitle: "Ok")
+            NetworkManager.shared.observePaginationFeatureFlagKey()
+            NetworkManager.shared.checkPaginationFeatureValue()
         }
     }
 } // END OF EXTENSION

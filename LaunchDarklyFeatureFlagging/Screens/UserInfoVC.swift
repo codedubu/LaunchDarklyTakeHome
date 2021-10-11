@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LaunchDarkly
 
 protocol UserInfoVCDelegate: AnyObject {
     func didRequestFollowers(for username: String)
@@ -22,6 +23,7 @@ class UserInfoVC: GFDataLoadingVC {
     var itemViews: [UIView] = []
     let dateLabel           = GFBodyLabel(textAlignment: .center)
     
+    var retrievedUser: User?
     var username: String!
     
     weak var delegate: UserInfoVCDelegate!
@@ -62,7 +64,10 @@ class UserInfoVC: GFDataLoadingVC {
             
             switch result {
             case .success(let user):
-                DispatchQueue.main.async { self.configreUIElements(with: user) }
+                DispatchQueue.main.async {
+                    self.retrievedUser = user
+                    self.configureItemVCFlipLDFeatureFlag()
+                }
                 
             case.failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something Went Wrong", message: error.rawValue, buttonTitle: "Ok")
@@ -71,7 +76,7 @@ class UserInfoVC: GFDataLoadingVC {
     }
     
     
-    func configreUIElements(with user: User) {
+    func configureUIElements(with user: User) {
         self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
         self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
         self.add(childVC: GFFollowerItemVC(user: user, delegate: self), to: self.itemViewTwo)
@@ -117,7 +122,7 @@ class UserInfoVC: GFDataLoadingVC {
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
     }
-    
+
     
     @objc func dismissVC() {
         dismiss(animated: true)

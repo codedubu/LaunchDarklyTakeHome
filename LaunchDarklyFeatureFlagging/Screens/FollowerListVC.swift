@@ -88,7 +88,7 @@ class FollowerListVC: GFDataLoadingVC {
             switch result {
             case .success(let followers):
                 self.updateUI(with: followers)
-                self.configureLDFFOnMainThread()
+                self.configureLDFeatureFlagOnMainThread()
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Followers Not Found", message: error.rawValue, buttonTitle: "Ok")

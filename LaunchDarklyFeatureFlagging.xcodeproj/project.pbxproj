@@ -46,6 +46,7 @@
 		7997FF89271418BA009A3E63 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997FF88271418BA009A3E63 /* UIViewController+Ext.swift */; };
 		7997FF8B271418C4009A3E63 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997FF8A271418C4009A3E63 /* UIView+Ext.swift */; };
 		7997FF8D271418D3009A3E63 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997FF8C271418D3009A3E63 /* UITableView+Ext.swift */; };
+		79CA96F72714DD12008D339A /* LDItemViewFlip+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA96F62714DD12008D339A /* LDItemViewFlip+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		7997FF88271418BA009A3E63 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		7997FF8A271418C4009A3E63 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		7997FF8C271418D3009A3E63 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		79CA96F62714DD12008D339A /* LDItemViewFlip+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LDItemViewFlip+Ext.swift"; sourceTree = "<group>"; };
 		D15F7D4AC2C568C61E85EE60 /* Pods-LaunchDarklyFeatureFlagging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchDarklyFeatureFlagging.debug.xcconfig"; path = "Target Support Files/Pods-LaunchDarklyFeatureFlagging/Pods-LaunchDarklyFeatureFlagging.debug.xcconfig"; sourceTree = "<group>"; };
 		EDA9DE45C8A73E229C49B71F /* Pods-LaunchDarklyFeatureFlagging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchDarklyFeatureFlagging.release.xcconfig"; path = "Target Support Files/Pods-LaunchDarklyFeatureFlagging/Pods-LaunchDarklyFeatureFlagging.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				793DA0662714CA9400645BB5 /* LDPagination+Ext.swift */,
+				79CA96F62714DD12008D339A /* LDItemViewFlip+Ext.swift */,
 			);
 			path = "LaunchDarkly Feature Flags";
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				7997FF6D27141814009A3E63 /* GFButton.swift in Sources */,
 				7997FF812714189C009A3E63 /* GFError.swift in Sources */,
 				7997FF67271417D2009A3E63 /* GFDataLoadingVC.swift in Sources */,
+				79CA96F72714DD12008D339A /* LDItemViewFlip+Ext.swift in Sources */,
 				7997FF612714178C009A3E63 /* GFFollowerItemVC.swift in Sources */,
 				7997FF5D27141779009A3E63 /* GFItemInfoVC.swift in Sources */,
 				7997FF63271417B1009A3E63 /* GFTabBarController.swift in Sources */,
