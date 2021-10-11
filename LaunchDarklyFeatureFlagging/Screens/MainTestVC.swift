@@ -9,14 +9,13 @@ import UIKit
 import LaunchDarkly
 
 class MainTestVC: UIViewController {
-    // MARK: - Outlets
+   
     @IBOutlet weak var featureFlagTestLabel: UILabel!
     @IBOutlet weak var currentFlagStatusLabel: UILabel!
     
-    // MARK: - Properties
     fileprivate let featureFlagKey = "change-text-of-test"
     
-    // MARK: - Lifecycle Methods
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +27,6 @@ class MainTestVC: UIViewController {
     }
     
     
-    // MARK: - Helpers
     fileprivate func checkFeatureValue() {
         let featureFlagValue = LDClient.get()!.variation(forKey: featureFlagKey, defaultValue: false)
                 
@@ -67,6 +65,5 @@ class MainTestVC: UIViewController {
             checkFeatureValue()
         }
     }
-    
 } // END OF CLASS
 
