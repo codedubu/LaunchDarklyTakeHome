@@ -44,12 +44,7 @@ extension UserInfoVC {
         let featureFlagValue = LDClient.get()!.variation(forKey: itemViewFlipFeatureFlagKey, defaultValue: false)
         guard let retrievedUser = retrievedUser else { return }
         
-        if featureFlagValue == false {
-            configureUIElementsWithFeatureFlag(with: retrievedUser)
-            
-        } else {
-            configureUIElements(with: retrievedUser)
-        }
+        featureFlagValue == false ? configureUIElements(with: retrievedUser) : configureUIElementsWithFeatureFlag(with: retrievedUser)
     }
     
     
