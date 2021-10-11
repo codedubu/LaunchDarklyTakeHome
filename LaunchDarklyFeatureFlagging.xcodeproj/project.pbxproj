@@ -80,8 +80,8 @@
 		799505CB2711151300751CD9 /* LaunchDarklyFeatureFlagging */ = {
 			isa = PBXGroup;
 			children = (
-				799505E127114D6300751CD9 /* Screens */,
 				799505E227114D7400751CD9 /* Storyboard */,
+				799505E127114D6300751CD9 /* Screens */,
 				799505E02711152400751CD9 /* Resources */,
 			);
 			path = LaunchDarklyFeatureFlagging;

@@ -18,19 +18,16 @@ class MainTestVC: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        LDClient.get()?.observe(key: featureFlagKey, owner: self) { [weak self] changedFlag in
-            self?.featureFlagDidUpdate(changedFlag.key)
-        }
-        
+        observeFFKey()
         checkFeatureValue()
     }
     
     
-    fileprivate func checkFeatureValue() {
+    fileprivate func updateAllLabels() {
         let featureFlagValue = LDClient.get()!.variation(forKey: featureFlagKey, defaultValue: false)
-                
-        featureFlagValue == false ? updateFlagLabels() : updateFlagLabels()
+        
+        updateTestLabel(value: featureFlagValue)
+        updateCurrentFlagStatusLabel(value: featureFlagValue)
     }
     
     
@@ -52,11 +49,17 @@ class MainTestVC: UIViewController {
     }
     
     
-    fileprivate func updateFlagLabels() {
+    fileprivate func observeFFKey() {
+        LDClient.get()?.observe(key: featureFlagKey, owner: self) { [weak self] changedFlag in
+            self?.featureFlagDidUpdate(changedFlag.key)
+        }
+    }
+    
+    
+    fileprivate func checkFeatureValue() {
         let featureFlagValue = LDClient.get()!.variation(forKey: featureFlagKey, defaultValue: false)
-        
-        updateTestLabel(value: featureFlagValue)
-        updateCurrentFlagStatusLabel(value: featureFlagValue)
+                
+        featureFlagValue == false ? updateAllLabels() : updateAllLabels()
     }
  
     
