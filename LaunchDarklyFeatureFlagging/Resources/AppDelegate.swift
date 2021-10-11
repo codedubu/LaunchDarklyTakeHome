@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setUpLDCClient() {
         let user = LDUser(key: "mccaine.river@gmail.com")
         
-        var config = LDConfig(mobileKey: mobileProdKey)
+        var config = LDConfig(mobileKey: mobileTestKey)
         config.eventFlushInterval = 30.0
         LDClient.start(config: config, user: user)
     }
