@@ -42,3 +42,8 @@ I wanted to focus on allowing the de-integration of feature flags in the future 
 - UserInfoVC: getUserInfo()
 - FollowerListVC: getFollowers()
 
+**Branches**
+- gettingStarted: Contains initial integration/testing of LaunchDarkly platform.
+- LaunchDarklyGHFollowers: Production app that uses the Production mobile key.
+- LaunchDarklyGHFollowersTest: Test app that uses the Test mobile key.
+
