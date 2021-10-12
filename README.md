@@ -44,6 +44,6 @@ I then wanted to see how I can change UI elements in the app. I decided to do th
 
 All of the functions required for the switching of the ItemViews are listed in the LDItemViewFlip+Ext. This is the result when activating the feature flag.
 
-![Screen Recording 2021-10-11 at 5 28 24 PM](https://user-images.githubusercontent.com/10967353/136871052-4110d17e-fc56-467c-8ac8-aabc844d2eb2.gif)
+![ScreenRecordingSample](https://user-images.githubusercontent.com/10967353/136880834-424cb273-ddba-41f6-a461-f03424967dd4.gif)
 
 I wanted to focus on allowing the de-integration of feature flags in the future being extremely easily, and because of this only have one function needed at each respective call site.
