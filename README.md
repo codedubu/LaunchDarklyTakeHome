@@ -1,5 +1,16 @@
 # LaunchDarklyTakeHome
 
+**Files to check:**
+- LDPagination+Ext.swift
+- LDItemViewFlip+Ext.swift
+- UserInfoVC: getUserInfo()
+- FollowerListVC: getFollowers()
+
+**Branches**
+- gettingStarted: Contains initial integration/testing of LaunchDarkly platform.
+- LaunchDarklyGHFollowers: Production app that uses the Production mobile key.
+- LaunchDarklyGHFollowersTest: Test app that uses the Test mobile key.
+
 I started with a simple test project based off the Hello LaunchDarkly for iOS project.
 
 ![beginning1_adobespark](https://user-images.githubusercontent.com/10967353/136870025-87ccbc08-2bbf-45fc-9109-cfe0a1fb69a1.png)
@@ -34,16 +45,3 @@ All of the functions required for the switching of the ItemViews are listed in t
 ![Screen Recording 2021-10-11 at 5 28 24 PM](https://user-images.githubusercontent.com/10967353/136871052-4110d17e-fc56-467c-8ac8-aabc844d2eb2.gif)
 
 I wanted to focus on allowing the de-integration of feature flags in the future being extremely easily, and because of this only have one function needed at each respective call site.
-
-
-**Files to check:**
-- LDPagination+Ext.swift
-- LDItemViewFlip+Ext.swift
-- UserInfoVC: getUserInfo()
-- FollowerListVC: getFollowers()
-
-**Branches**
-- gettingStarted: Contains initial integration/testing of LaunchDarkly platform.
-- LaunchDarklyGHFollowers: Production app that uses the Production mobile key.
-- LaunchDarklyGHFollowersTest: Test app that uses the Test mobile key.
-
