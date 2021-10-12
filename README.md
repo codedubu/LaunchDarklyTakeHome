@@ -4,7 +4,7 @@
 - LDPagination+Ext.swift
 - LDItemViewFlip+Ext.swift
 - FollowerListVC: getFollowers()
-- - UserInfoVC: getUserInfo()
+- UserInfoVC: getUserInfo()
 
 **Branches**
 - gettingStarted: Contains initial integration/testing of LaunchDarkly platform.
