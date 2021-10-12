@@ -42,8 +42,9 @@ I then wanted to see how I can change UI elements in the app. I decided to do th
 
 ![ItemView1_adobespark](https://user-images.githubusercontent.com/10967353/136870317-659c2160-c77c-49f3-865b-939f21ca5197.png)
 
-This is the result when activating the feature flag.
+
+The pagination feature flag is much easier to see while using the app. Try searching the user twostraws in the main view controller to see a large list of followers.
+
+This is the result when activating the ItemView flipping feature flag.
 
 ![ScreenRecordingSample](https://user-images.githubusercontent.com/10967353/136880834-424cb273-ddba-41f6-a461-f03424967dd4.gif)
-
-I wanted to focus on allowing the de-integration of feature flags in the future being extremely easily, and because of this only have one function needed at each respective call site.
